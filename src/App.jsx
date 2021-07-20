@@ -1,9 +1,13 @@
-import SampleComponent from './components/SampleComponent';
+import { Switch, Route } from 'react-router-dom';
+import { HomePage, BisPage } from './pages';
 
 function App() {
   return (
     <div className="App">
-      <SampleComponent />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/bis" component={BisPage} />
+      </Switch>
     </div>
   );
 }
